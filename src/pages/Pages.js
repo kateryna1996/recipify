@@ -14,8 +14,8 @@ function Pages() {
                 <Route path="/" element={<Home/>} />
                 <Route path="login" element={<Login/>} />
                 <Route path="recipes/*" element={<Recipe/>} >
-                    <Route path="category" element={<Category/>} />
-                    <Route path="search" element={<Search/>} />
+                    <Route path="category/:name" element={<Category/>} />
+                    <Route path="search/:id" element={<Search/>} />
                 </Route>
             </Routes>
         </div>

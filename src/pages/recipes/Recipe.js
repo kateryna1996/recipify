@@ -1,11 +1,11 @@
 import  React from 'react';
-import {  Link, Outlet } from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
 import axios from "axios";
 
 
 function Recipe() {
 
-
+const { id, type } = useParams();
 
 
     return (
@@ -13,8 +13,8 @@ function Recipe() {
 
            <h2>Recipes</h2>
             <nav>
-                <Link to="category">Category</Link>
-                <Link to="search">Search Recipes</Link>
+                <Link to={`category/${type}`}>Category</Link>
+                <Link to={`search/${id}`}>Search Recipes</Link>
             </nav>
             <Outlet/>
 
