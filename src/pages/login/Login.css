@@ -1,0 +1,274 @@
+.login-nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    z-index: -1;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/*******************    Pages    *************************/
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5.6rem 2.2rem;
+    padding: 0 1.8rem;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 25px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+    width: 320px;
+    height: 320px;
+
+    background-color: #4b7124;
+    border-radius: 50% 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 25px;
+}
+
+.parent {
+    align-items: center;
+    position: relative;
+
+    top: 0;
+    left: 0;
+}
+
+.image-small-chef {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 20%;
+
+    padding: 30px;
+    z-index: 1;
+}
+
+.image-small-welcome {
+    position: absolute;
+    z-index: 5;
+
+    width: 100px;
+    height: 100px;
+
+    left: calc(50% - 50px);
+    bottom: -40px;
+}
+
+/**********************  Form   ****************************/
+form {
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 300px;
+
+    background-image: linear-gradient(to right, var(--gray), black);
+
+    padding: 2rem;
+    margin: 4rem;
+
+    border-radius: 10px;
+    border: none;
+}
+
+form label {
+    width: 100%;
+    margin: 1.1rem 0;
+
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+}
+
+form input {
+    width: 100%;
+
+    font-size: 1.5rem;
+
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
+    transition: ease-in-out 0.3s;
+}
+
+.title-form {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--sea-green);
+}
+
+.password-align {
+    display: flex;
+    align-content: center;
+}
+
+.show-password {
+    margin-left: -3rem;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.label {
+    cursor: pointer;
+    align-items: center;
+}
+/*********************   Button   ****************************/
+.form-button {
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 15px 30px;
+
+    margin: 25px 0;
+    border-radius: 20px;
+    border: none;
+
+    background-color: #4b7124;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.7) 0 5px 5px;
+
+    transition: ease-in-out 0.3s;
+}
+
+.form-button:hover {
+    background-color: var(--earth);
+    font-size: 2.3rem;
+    border: white;
+}
+
+/********************   Links/Buttons    ****************************/
+.reg-button {
+    display: flex;
+    justify-content: center;
+
+    color: var(--earth);
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+
+    transition: ease-in-out 0.3s;
+}
+
+.reg-button:hover {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #ce9f09;
+}
+
+
+/****************************       **************************/
+
+.form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 35px;
+
+    font-size: 1.5em;
+
+}
+
+/****************************   Register    **********************************/
+
+.image-small-cook {
+    width: 225px;
+    height: 225px;
+}
+
+.register-background {
+    background-color: #f6cb48;
+}
+
+/**********************     Media    ************************/
+
+@media (max-width: 560px) {
+    .centered {
+        display: none;
+    }
+
+    .wrapper {
+        max-width: 100%;
+        margin: 3rem;
+        padding: 1rem;
+    }
+
+    .form-text h5 {
+        font-size: 1.5rem;
+    }
+
+    .reg-button:hover {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .wrapper {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    form {
+        background: none;
+
+        width: 190px;
+        max-width: 100%;
+
+        padding: 2rem;
+    }
+
+    form label {
+        padding:  0.5rem 1rem;
+        font-size: 1rem;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: var(--gray);
+    }
+    form input, .form-text h5 {
+        font-family: 'Quicksand', sans-serif;
+        color: var(--gray);
+    }
+
+    .form-button {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+
+    .reg-button {
+        font-size: 1rem;
+    }
+
+    .reg-button:hover {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+}

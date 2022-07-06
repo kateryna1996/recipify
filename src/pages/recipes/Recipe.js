@@ -1,24 +1,45 @@
-import  React from 'react';
+import React from 'react';
 import {Link, Outlet, useParams} from "react-router-dom";
-import axios from "axios";
+
+import "./Recipe.css"
+import WrapperMain from "../../components/wrapper/WrapperMain";
+import PopularPicks from "../../components/popularPicks/PopularPicks";
+import SearchBar from "../../components/searchBar/SearchBar";
+import {UnorderedList} from "../../components/functionalComponents/UnorderedList";
+import {RecipeNavigationItem} from "../../components/functionalComponents/RecipeNavigationItem";
 
 
 function Recipe() {
 
-const { id, type } = useParams();
-
+    const {id} = useParams();
 
     return (
-        <div>
+        <WrapperMain>
+            <article className="recipe">
 
-           <h2>Recipes</h2>
-            <nav>
-                <Link to={`category/${type}`}>Category</Link>
-                <Link to={`search/${id}`}>Search Recipes</Link>
-            </nav>
-            <Outlet/>
+                <h1 className="title">
+                    <Link to="/recipes"
+                          className="link-to-recipes"
+                    >
+                        Recipes
+                    </Link>
+                </h1>
 
-        </div>
+                <UnorderedList className="navigation-wrapper">
+                    <RecipeNavigationItem
+                        path={"category"}
+                        title="Category"
+                    />
+                    <RecipeNavigationItem
+                        path={`search/${id}`}
+                        title="Search Recipes"
+                    />
+                </UnorderedList>
+                <SearchBar/>
+                <Outlet/>
+                <PopularPicks/>
+            </article>
+        </WrapperMain>
     );
 }
 

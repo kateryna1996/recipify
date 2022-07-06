@@ -1,0 +1,262 @@
+.recipe-details {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    border: 2px solid var(--gray);
+
+    padding: 75px 25px;
+    margin: 50px 0;
+}
+
+/*********************   Group   ****************************/
+.group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    gap: 25px;
+    padding: 20px;
+}
+
+.group-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.group-title h4 {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+.details-color {
+    color: var(--sea-green);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.main-image {
+    width: 100%;
+    height: 50%;
+
+    border-radius: 10px;
+
+    box-shadow: 0 15px 15px -6px #777;
+}
+
+/*****************************************************/
+.description {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3em;
+
+    padding: 35px;
+}
+
+.description:first-letter {
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+
+    color: red;
+}
+
+.description a {
+    color: var(--sea-green);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.description a:hover {
+    font-size: 1.2em;
+
+    color: var(--cyber-yellow);
+}
+
+
+/******************  Buttons   ****************************/
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.buttons button {
+    font-size: 1.3em;
+
+    padding: 15px 35px;
+    margin: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -6px #777;
+
+    cursor: pointer;
+
+    transition: ease-in-out 0.3s;
+}
+
+.active-button {
+    background-color: #876644;
+    color: white;
+
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+
+/*************************  Instructions    *****************************/
+
+.section-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 800px;
+    padding: 75px;
+    border-radius: 15px;
+
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.2rem;
+
+    background-color: var(--gray);
+    color: white;
+}
+
+/************************   OL    ***********************/
+ol:nth-of-type(1) {
+    list-style-position: inside;
+    padding: 10px;
+    border-left: solid 2px white;
+}
+
+ol li:first-letter {
+    font-family: 'Dancing Script', cursive;
+    color: var(--cyber-yellow);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+ol li::marker {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+}
+
+/**************************  UL   **********************/
+
+.ingredients {
+    list-style-type: none;
+    position: relative;
+}
+
+.ingredients li:before {
+    content: "↠";
+    position: absolute;
+    left: -35px;
+}
+
+.ingredients li:first-letter {
+    font-family: 'Dancing Script', cursive;
+    color: var(--cyber-yellow);
+    font-size: 1.5rem;
+}
+
+/************************    Shopping List   *****************************/
+.shop-list {
+    list-style-type: square;
+}
+
+.shop-list h4 {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.shop-list p {
+    padding-left: 30px;
+}
+
+.shop-list li:first-letter {
+    font-family: 'Dancing Script', cursive;
+    color: var(--cyber-yellow);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+
+/*********************************  Media    **********************/
+
+@media (max-width: 990px ) {
+    .recipe-details {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+
+        border: none;
+    }
+
+    /*********************   Group   ****************************/
+    .group {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .group-title {
+        justify-content: center;
+        align-items: center;
+
+        margin: 20px;
+    }
+
+    .group-title h1 {
+        font-size: 3.4em;
+    }
+
+    .main-image {
+        min-width: 250px ;
+        margin: 30px 50px;
+    }
+
+    .description {
+        font-size: 1.4rem;
+        padding: 75px 35px;
+    }
+
+    /******************  Buttons   ****************************/
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 90px;
+    }
+
+    .buttons button {
+        font-size: 1.3em;
+
+        min-width: 220px;
+    }
+
+    /*************************  Instructions    *****************************/
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+
+
+        margin: 25px;
+        padding: 90px;
+
+        font-size: 1.2em;
+
+    }
+
+}

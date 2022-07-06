@@ -1,0 +1,50 @@
+.article-body {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 400;
+
+    margin: 9rem 1.7rem;
+}
+
+.link-page {
+    text-decoration: none;
+    padding: 10px;
+
+    color: var(--sea-green);
+    transition: ease-in-out 0.3s;
+
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.link-page:hover {
+    color: var(--earth);
+    font-size: 1.6em;
+}
+
+.home-page-heading {
+    padding: 3.2rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/*********************Media************************/
+@media (max-width: 990px ) {
+    /*  --->       Misschien        */
+}
+
+@media (max-width: 560px ) {
+    .home-page-heading {
+        padding: 3.2rem 1rem;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .article-body {
+        font-size: 1.4em;
+    }
+}

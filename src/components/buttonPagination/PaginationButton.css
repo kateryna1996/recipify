@@ -1,0 +1,56 @@
+.buttons-page {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 5px 10px;
+
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.buttons-page:hover:enabled {
+    font-size: 1.4rem;
+    padding: 1rem 2.3rem;
+
+    color: white;
+    background-image: linear-gradient(to right,
+    var(--gray),
+    rgba(13, 13, 15, 0.93));
+}
+
+
+@media (max-width: 560px) {
+    .buttons-page {
+        width: 200px;
+        max-width: 100%;
+
+        font-size: 1.2rem;
+
+        margin: 0.6rem 0;
+        padding: 1rem 1.5rem;
+    }
+
+    .buttons-page:hover {
+        font-size: 1.3rem;
+        padding: 1rem 1.3rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .buttons-page {
+        width: 100%;
+        max-width: 150px;
+        font-size: 1rem;
+
+        padding: 0.5rem 0.7rem;
+    }
+
+    .buttons-page:hover {
+        font-size: 1.1rem;
+    }
+}

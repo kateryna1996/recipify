@@ -1,0 +1,24 @@
+/*********************  Errors  *******************/
+.error-message-data-fetch {
+    color: crimson;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+@media (max-width: 560px) {
+    .error-message-data-fetch {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .error-message-data-fetch {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+}

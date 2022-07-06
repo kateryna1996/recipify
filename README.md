@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# <span style="color:white; font-family: 'Monotype Corsiva'; font-size: 3rem">🍃 Welcome to the page! </span>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4>_°This project has been designed as my final assignment for 💫NOVI Hogeschool 2022!°_</h3>
+The name of the application is: 
 
-## Available Scripts
+![recepify](src/assets/recipify.png)
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+##### The application was designed with the purpose of taking off the burden of people's shoulders and giving them a simple answer to the all-times-popular :
+><h1 style="color:white; font-family: 'Monotype Corsiva' ">"What are we eating today?"</h1>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***
+## Table of content: 
+* [Structure of the website](#structure)
+* [Preview](#preview)
+* [Installation](#installation)
+* [Functionality](#functionality)
+* [Creative Acknowledgement](#creative-acknowledgement)
+***
+## Structure
+This webapplication was build with:
+- React;
+- Spoonacular API;
+- Hogeschool NOVI Backend; 
+- and a bit of enthusiasm. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+####The application consists of the following pages:
+- Home;
+- Sign In with a Register subpage;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+####After a user signs in the availiable pages are:
+- Home;
+- Recipe Search with subpages:
 
-### `npm run build`
+  * Search,
+  * Category,
+- Profile;
+- \+ Log out button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Preview 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Recipes](src/assets/recipes.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+***
+## Installation
+Once you  copy the application on your device, you are to do the following:
+1. Install the node modules by running 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. To start the application, you need to type 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm start`
 
-## Learn More
+3. Open [http://localhost:3000]( http://localhost:3000) to view it in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As the application is making use of a <a style="color:#8967F7" href="https://spoonacular.com/food-api">Spoonacular API</a>, the user would need to :
+1. go to the website and make an account to get an **_api key_** (using only your email);
+2. save the api Key in the .env file. as a 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`REACT_APP_API_KEY ` 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+***
+## Functionality
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+####The application is easy to use, but to be able to make use of the services, one would need to<span style="color:green;font-weight:700;font-size:16px"> **_register_**</span>, which can be done with:
+- _email_;
+- _and some imagination for password and name_.
 
-### Making a Progressive Web App
+To <span style="color:green;font-weight:700;font-size:16px">_**log in**_</span> you would only need to enter your name and password.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Once you are logged in, <span style="text-decoration: underline">you are able to</span>:
+- search recipes by <span style="color: #86B986">the name or ingredient;</span>
+- choose from <span style="color: #86B986">food categories</span>( you can choose dessert or main dish, or breakfast);
+- get <span style="color: #86B986">random recipes</span> to get you started;
+- check the <span style="color: #86B986">nutritional value</span> of the dish;
+- get the <span style="color: #86B986">shopping list with the aisle enumeration;
+- get the <span style="color: #86B986">instructions list</span> to make cooking even easier.
+***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💫Creative usage acknowledgement: 
 
-### Deployment
+These are the  images that have been used in the web application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/welcome">
+Welcome icons created by Freepik - Flaticon;</a>
 
-### `npm run build` fails to minify
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/food-and-restaurant">
+Food and restaurant icons created by Pixel perfect - Flaticon;</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/cook">
+Cook icons created by bqlqn - Flaticon</a>
+
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/account">
+Account icons created by srip - Flaticon</a>
+
+৹ <a style="color:#8967F7" style="color:#8967F7" href="https://www.flaticon.com/free-icons/home">
+Home icons created by Freepik - Flaticon</a>
+
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/salad">
+Salad icons created by mynamepong - Flaticon</a>
+
+৹ <a style="color:#8967F7" href="https://pngtree.com/so/crying">
+Crying png from pngtree.com</a>
+
+৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/error">
+Error icons created by Freepik - Flaticon</a>
+
+✓ I also have made use of the <a style="color:#8967F7" href="https://react-icons.github.io/react-icons/">react icons</a>. If you are interested in it, you can just install a package with 
+
+`npm install react-icons --save `.
+
+***

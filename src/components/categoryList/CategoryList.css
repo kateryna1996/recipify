@@ -1,0 +1,127 @@
+.category {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.li-category {
+    list-style-type: "‣";
+}
+
+.category-item {
+    padding: 12px 30px;
+    margin: 0 5px;
+
+    min-width: 140px;
+    font-size: 1.5rem;
+    color: var(--gray);
+
+    cursor: pointer;
+
+    border: none;
+    border-bottom: 2px solid var(--gray);
+
+    border-radius: 7px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.category-item:hover {
+    font-size: 1.7rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 0;
+}
+
+/******************************  Media   ***********************************/
+@media (max-width: 1200px ) {
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+
+    }
+
+    .category-list {
+        max-width: 100%;
+
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+
+        height: 120px;
+        margin: 0 20px;
+
+        border: 3px solid yellow;
+    }
+
+}
+
+@media (max-width: 990px ) {
+    .category-list {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .category {
+        max-width: 100%;
+    }
+
+    .category-list {
+        height: 100%;
+        width: 100%;
+    }
+
+    .li-category {
+        margin: 0.3rem;
+        height: 100%;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    .category-item {
+        padding: 10px;
+        margin: 0;
+
+        width: 200px;
+        max-width: 90%;
+
+        font-size: 1.3rem;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .category {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .category-list {
+        justify-content: center;
+    }
+
+    .category-item {
+        font-size: 1rem;
+        padding: 0.3rem;
+        margin: 0;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+}

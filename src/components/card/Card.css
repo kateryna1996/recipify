@@ -1,0 +1,148 @@
+.card-recipe {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    width: 340px;
+    height: 420px;
+    margin: 20px 0;
+
+    border-radius: 0 50px 0 50px;
+    box-shadow: rgba(0, 0, 0, 0.36) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.recipe-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--gray);
+    padding-bottom: 20px;
+
+    position: relative;
+}
+
+.recipe-title {
+    font-size: 2.3rem;
+
+    text-align: center;
+    padding:  0.5rem 0;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.recipe-title:hover {
+    font-size: 1.9em;
+    color: var(--sea-green);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 250px;
+}
+
+.recipe-link p {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 20px;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.default-image {
+    width: 200px;
+    padding: 10px 0 0 0;
+}
+
+.see-more {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.see-more p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 2rem;
+
+    border-radius: 0 10px;
+    margin-right: 0;
+    padding: 0.7rem 2rem;
+    background-image: linear-gradient(to left, var(--cyber-yellow), white);
+
+    transition: all ease-in-out 0.3s ;
+}
+
+.see-more p:hover {
+    box-shadow: rgba(0, 0, 0, 0.36) 0 10px 36px 0,
+                rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    background-image: linear-gradient(to right, #feffb3 ,#fffd6f, var(--cyber-yellow));
+}
+
+@media (max-width: 560px) {
+    .card-recipe {
+        max-width: 100%;
+        width: 300px;
+        height: 360px;
+
+        padding: 1.2rem 1.3rem;
+    }
+    .recipe-title {
+        font-size: 1.4rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .recipe-title:hover {
+        font-size: 1.6rem;
+    }
+    .recipe-image, .default-image {
+        width: 100%;
+        height: 190px;
+
+        box-shadow: none;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .card-recipe {
+        width: 200px;
+        height: 300px;
+
+        margin: 1rem 0;
+    }
+
+    .recipe-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        padding: 0.5rem;
+
+    }
+
+    .recipe-title:hover {
+        font-size: 1.3em;
+    }
+
+    .recipe-image {
+        width: 100%;
+        height: 150px;
+
+        border-radius: 1rem;
+        box-shadow: none;
+    }
+
+    .default-image {
+        width: 100%;
+        height: 150px;
+
+        padding: 0.8rem 0 0 0;
+    }
+
+}

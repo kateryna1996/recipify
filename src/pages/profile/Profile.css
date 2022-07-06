@@ -1,0 +1,166 @@
+.profile {
+    width: 100%;
+    padding: 3rem 5rem 9rem 5rem;
+
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 2.3rem;
+
+    flex-direction: row;
+    justify-content: center;
+
+    border: 1px solid var(--gray);
+}
+
+.title-profile {
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 2rem;
+}
+
+.user-image {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 3rem 0;
+}
+
+
+.avatar-wrapper {
+    margin: 3rem 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+}
+
+.closed {
+    display: none;
+}
+
+.default {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-upload {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 0.4rem;
+
+    font-size: 1.4rem;
+    font-family: 'Quicksand', sans-serif;
+
+    outline: none;
+}
+
+.avatar-button {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 0.6rem 2rem;
+    margin: 0.6rem;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+
+    background-color: var(--gray);
+    color: #FFFFFF;
+
+    border-radius: 0.6rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 3px 5px;
+    transition: all ease-in-out 0.3s;
+}
+
+.avatar-button:hover {
+    background-image: linear-gradient(to right, var(--gray), rgba(13, 13, 15, 0.93));
+    font-size: 1.3rem;
+    padding: 0.7rem 1.8rem;
+}
+
+.toggle-open {
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    max-width: 30px;
+}
+
+.info-details {
+    font-size: 1.1em;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.personal-information {
+    margin: 3rem 0;
+}
+
+.home {
+    margin-top: 3rem;
+}
+
+aside {
+    padding: 3rem 0;
+    font-weight: 300;
+    font-size: 2.2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+/******************************************************/
+@media (max-width: 990px) {
+    .profile {
+        border: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .avatar-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .title-profile {
+        font-size: 3rem;
+        padding: 0.5rem;
+    }
+
+    .avatar-button {
+        padding: 0.4rem;
+        margin: 0.2rem;
+
+        font-size: 1.2rem;
+    }
+
+    .avatar-button:hover {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .avatar-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+}

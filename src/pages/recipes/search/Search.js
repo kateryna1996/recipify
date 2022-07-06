@@ -1,78 +1,84 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import Card from "../../../components/card/Card";
 import {useParams} from "react-router-dom";
+
+import Card from "../../../components/card/Card";
+import LoadingMessage from "../../../components/loadingMessage/LoadingMessage";
+import ErrorMessage from "../../../components/error/errorMessage/ErrorMessage";
+import PaginationButton from "../../../components/buttonPagination/PaginationButton";
+import {BiUpArrowCircle} from "react-icons/bi";
+import {AiOutlineFieldNumber} from "react-icons/ai";
+
 
 function Search() {
 
-
-    const [ search, setSearch ] = useState('');
+    const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(false);
     const [recipes, setRecipes] = useState([]);
+    const [page, setPage] = useState(0);
+    const [totalResults, setTotalResults] = useState(0);
 
-    const { id } = useParams();
-    // console.log(id);
+    let params = useParams();
 
-    //i need to compare id from my search result and pass it to
-    // the search function and to the routing
+    async function getSearchResult(search) {
 
+        toggleError(false);
+        toggleLoading(true);
 
-    function handleSearch(e) {
-        setSearch(e.target.value);
-        // console.log(e.target.value);
-    }
-
-    function getSearch(e) {
-        e.preventDefault();
-        getSearchResult();
-
-    }
-
-
-    async function getSearchResult(){
-        try{
-            const {data} = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}`);
-            console.log(data.results);
+        try {
+            const {data} = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}&offset=${page}&number=9`);
+            console.log(data);
             setRecipes(data.results);
-            setSearch('');
-        }catch(e){
+            setPage(data.offset);
+            setTotalResults(data.totalResults);
+        } catch (e) {
             console.error(e);
+            toggleError(true);
         }
+        toggleLoading(false);
     }
 
-
-
+    useEffect(() => {
+            getSearchResult(params.id);
+        },
+        [params.id, page]
+    )
 
     return (
-        <div>
-            <h2>Search</h2>
-            <form onSubmit={getSearch}>
+            <main className="wrapper-search">
+                <h1>Search</h1>
 
-                <input
-                    className="search-bar"
-                    autoFocus
-                    type="text"
-                    value={search}
-                    onChange={handleSearch}
-                    placeholder="Search any recipe"
-                />
-                <button
-                type="submit"
-                >Search</button>
-            </form>
+                {loading && <LoadingMessage/>}
+                {error && <ErrorMessage/>}
 
-            <div>
-                { recipes !== [] && recipes.map( (recipe) => {
-                    return <Card
-                        key={recipe.id}
-                        recID={recipe.id}
-                        title={recipe.title}
-                        image={recipe.image}
-                    />
-                }) }
-            </div>
+                {recipes.length > 0 ?
+                    <div className="inner-content-container">
+                        <h2>{params.id}</h2>
+                        <h4>The <AiOutlineFieldNumber/> of results: {totalResults}</h4>
+                    </div>
+                    :
+                    <div className="inner-content-container">
+                        <h3 className="warning-message">
+                            Please type first what you want to look for!
+                            < BiUpArrowCircle/>
+                        </h3>
+                    </div>
+                }
 
-        </div>
+                <div className="popular-recipes-wrapper">
+                    {recipes.length > 0 && recipes.map((recipe) => {
+                        return <Card
+                            key={recipe.id}
+                            recID={recipe.id}
+                            title={recipe.title}
+                            image={recipe.image}
+                        />
+                    })
+                    }
+                </div>
+                {recipes.length > 0 && <PaginationButton page={page} setPage={setPage}/>}
+            </main>
     );
-};
+}
 
 export default Search;

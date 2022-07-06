@@ -1,0 +1,53 @@
+/**********************   Errors  ************************/
+.error-message {
+    width: 100%;
+
+    color: crimson;
+    margin: 1.1rem 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: inherit;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.error-message::after {
+    content: " ";
+    display: block;
+    margin: 0;
+    border-bottom: 2px solid crimson;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.error-message:hover {
+    font-size: 1.5rem;
+}
+
+.error-message::after:hover {
+    border-bottom: 3px solid crimson;
+}
+@media (max-width: 990px) {
+    .error-message::after {
+        width: 100%;
+    }
+}
+@media (max-width: 300px) {
+    .error-message {
+        font-size: 1rem;
+    }
+
+    .error-message::after {
+        border-bottom: 1px solid crimson;
+    }
+
+    .error-message:hover {
+        font-size: 1.3rem;
+    }
+
+    .error-message::after:hover {
+        border-bottom: 2px solid crimson;
+    }
+}

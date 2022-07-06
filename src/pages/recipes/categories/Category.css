@@ -1,0 +1,8 @@
+.popular-recipes-wrapper h5 {
+    width: 100%;
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--sea-green);
+}
