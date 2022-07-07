@@ -19,7 +19,7 @@ The name of the application is:
 * [Creative Acknowledgement](#creative-acknowledgement)
 ***
 ## Structure
-This webapplication was build with:
+This webapplication was built with:
 - React;
 - Spoonacular API;
 - Hogeschool NOVI Backend; 
@@ -29,6 +29,7 @@ This webapplication was build with:
 ####The application consists of the following pages:
 - Home;
 - Sign In with a Register subpage;
+- Not Found Page
 
 ####After a user signs in the availiable pages are:
 - Home;
@@ -40,9 +41,15 @@ This webapplication was build with:
 - \+ Log out button.
 
 ### Preview 
+This a  Recipe Search Page: 
+
 
 ![Recipes](src/assets/recipes.gif)
 
+
+The Register Page: 
+
+![Register](src/assets/sign%20up_Moment.jpg)
 
 ***
 ## Installation
@@ -90,28 +97,28 @@ Once you are logged in, <span style="text-decoration: underline">you are able to
 These are the  images that have been used in the web application:
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/welcome">
-Welcome icons created by Freepik - Flaticon;</a>
+Welcome icons created by Freepik - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/food-and-restaurant">
-Food and restaurant icons created by Pixel perfect - Flaticon;</a>
+Food and restaurant icons created by Pixel perfect - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/cook">
-Cook icons created by bqlqn - Flaticon</a>
+Cook icons created by bqlqn - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/account">
-Account icons created by srip - Flaticon</a>
+Account icons created by srip - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" style="color:#8967F7" href="https://www.flaticon.com/free-icons/home">
-Home icons created by Freepik - Flaticon</a>
+Home icons created by Freepik - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/salad">
-Salad icons created by mynamepong - Flaticon</a>
+Salad icons created by mynamepong - Flaticon</a>;
 
 ৹ <a style="color:#8967F7" href="https://pngtree.com/so/crying">
-Crying png from pngtree.com</a>
+Crying png from pngtree.com</a>;
 
 ৹ <a style="color:#8967F7" href="https://www.flaticon.com/free-icons/error">
-Error icons created by Freepik - Flaticon</a>
+Error icons created by Freepik - Flaticon</a>.
 
 ✓ I also have made use of the <a style="color:#8967F7" href="https://react-icons.github.io/react-icons/">react icons</a>. If you are interested in it, you can just install a package with 
 
