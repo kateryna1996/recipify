@@ -12,11 +12,11 @@ The name of the application is:
 
 ***
 ## Table of content: 
-* [Structure of the website](#structure)
+* [Structure](#structure)
 * [Preview](#preview)
 * [Installation](#installation)
 * [Functionality](#functionality)
-* [Creative Acknowledgement](#creative-acknowledgement)
+* [Creative Usage Acknowledgement](#creative-usage-acknowledgement)
 ***
 ## Structure
 This webapplication was built with:
