@@ -26,12 +26,12 @@ This webapplication was built with:
 - and a bit of enthusiasm. 
 
 
-####The application consists of the following pages:
+#### The application consists of the following pages:
 - Home;
 - Sign In with a Register subpage;
 - Not Found Page
 
-####After a user signs in the availiable pages are:
+#### After a user signs in the availiable pages are:
 - Home;
 - Recipe Search with subpages:
 
@@ -76,7 +76,7 @@ As the application is making use of a <a style="color:#8967F7" href="https://spo
 ## Functionality
 
 
-####The application is easy to use, but to be able to make use of the services, one would need to<span style="color:green;font-weight:700;font-size:16px"> **_register_**</span>, which can be done with:
+#### The application is easy to use, but to be able to make use of the services, one would need to<span style="color:green;font-weight:700;font-size:16px"> **_register_**</span>, which can be done with:
 - _email_;
 - _and some imagination for password and name_.
 
