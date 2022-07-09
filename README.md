@@ -40,7 +40,9 @@ This webapplication was built with:
 - Profile;
 - \+ Log out button.
 
-### Preview 
+***
+
+## Preview 
 This a  Recipe Search Page: 
 
 

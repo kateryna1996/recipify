@@ -36,7 +36,7 @@ function Register() {
 
 
     function onFormSubmit(data) {
-        console.log(data.email, data.name, data.password);
+
         setSuccessMessage(false);
         setRegisterError('');
         toggleLoading(true);

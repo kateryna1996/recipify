@@ -30,8 +30,8 @@ function AuthContextProvider({children}) {
                 ...isAuth,
                 status: "done",
             });
+            logout();
         }
-
     }, [])
 
     const getUserData= async (token) => {
@@ -47,8 +47,7 @@ function AuthContextProvider({children}) {
                 user: {
                     email: response.data.email,
                     username: response.data.username,
-                    id: response.data.id,
-                    profilePicture: response.data.profilePicture,
+                     id: response.data.id,
                 },
                 status: "done",
             })
@@ -64,7 +63,6 @@ function AuthContextProvider({children}) {
 
     function login(data) {
         localStorage.setItem("token", data.accessToken);
-        console.log('Gebruiker is ingelogd!');
         toggleIsAuth({
             ...isAuth,
             isAuth: true,
@@ -72,17 +70,15 @@ function AuthContextProvider({children}) {
                 email: data.email,
                 username: data.username,
                 id: data.id,
-                profilePicture: data.profilePicture,
             },
             status: "done",
         });
-
         navigate("profile");
     }
 
     function logout() {
-        console.log('Gebruiker is uitgelogd!');
         localStorage.removeItem("token");
+        localStorage.removeItem("avatar");
         toggleIsAuth({
             isAuth: false,
             user: null,
@@ -98,7 +94,6 @@ function AuthContextProvider({children}) {
         login: login,
         logout: logout,
         authUrl: url,
-
     }
 
     return (

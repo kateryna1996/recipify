@@ -14,7 +14,6 @@ function MobileNavigation(props) {
     }
     function toggleHamburgerMenu() {
         setOpen(!open);
-        console.log("You clicked");
     }
 
     const hamburgerMenu = <AiOutlineMenu className="hamburger"

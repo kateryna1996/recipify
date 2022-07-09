@@ -26,14 +26,13 @@ function Profile() {
     const [openSettings, setOpenSettings] = useState(true);
     const [currentAvatar, setCurrentAvatar] = useState(null);
 
-    const {authUrl, user: {username, email, profilePicture}, toggleIsAuth, isAuth} = useContext(AuthContext);
+    const {authUrl, user: {username, email}, toggleIsAuth, isAuth} = useContext(AuthContext);
 
     const token = localStorage.getItem("token");
 
 
     async function uploadPhoto() {
 
-        const source = axios.CancelToken.source();
         setLoading(true);
         setError(false);
         setPhoto(null);
@@ -42,7 +41,6 @@ function Profile() {
             await axios.post(`${authUrl}user/image`, {
                     "base64Image": photo,
                 }, {
-                    cancelToken: source.token,
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -54,9 +52,6 @@ function Profile() {
             setError(true);
         }
         setLoading(false);
-        return function cleanup() {
-            source.cancel();
-        }
     }
 
 
@@ -76,7 +71,6 @@ function Profile() {
                     Authorization: `Bearer ${token}`,
                 }
             });
-            console.log(response);
             localStorage.setItem("avatar", response.data.profilePicture);
             setCurrentAvatar(response.data.profilePicture);
         } catch (e) {
@@ -91,9 +85,7 @@ function Profile() {
 
     useEffect(() => {
         setCurrentAvatar(localStorage.getItem("avatar"));
-    },
-    // }, [localStorage.getItem("avatar")]
-        []);
+    },[]);
 
 
     return (
@@ -162,10 +154,8 @@ function Profile() {
                             Would you like to change your email or password? Click here
                             <span
                                 className="toggle-open"
-                                onClick={() => {
-                                    setOpenSettings(!openSettings);
-                                    console.log("settings");
-                                }}>
+                                onClick={() => setOpenSettings(!openSettings)}
+                            >
                                  <RiSettings5Fill size="30px"/>
                             </span>
                         </h5>

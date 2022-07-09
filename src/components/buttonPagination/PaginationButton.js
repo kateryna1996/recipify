@@ -1,7 +1,7 @@
 import React from 'react';
 import "./PaginationButton.css"
 
-function PaginationButton({page, setPage}) {
+function PaginationButton({page, setPage, recipes, totalResults}) {
 
     function nextPage() {
         setPage(prevPage => prevPage + 1)
@@ -10,6 +10,8 @@ function PaginationButton({page, setPage}) {
     function previousPage() {
         setPage(prevPage => prevPage - 1);
     }
+
+    const lastPage = Math.ceil(totalResults / 9);
 
     return (
         <article className="navigation-wrapper">
@@ -26,6 +28,7 @@ function PaginationButton({page, setPage}) {
                 type="button"
                 onClick={nextPage}
                 className="buttons-page"
+                disabled={page === lastPage}
             >
                 Next Page
             </button>

@@ -35,7 +35,6 @@ function ChangeInformation({open}) {
     }
 
     function onFormSubmitPassword(data) {
-        console.log(data);
         setSuccessMessage(false);
         setError('');
         toggleLoading(true);
@@ -69,7 +68,6 @@ function ChangeInformation({open}) {
     }
 
     function onFormSubmitEmail(data){
-        console.log(data);
         setSuccessMessage(false);
         setError('');
         toggleLoading(true);

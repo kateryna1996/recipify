@@ -76,7 +76,7 @@ function Search() {
                     })
                     }
                 </div>
-                {recipes.length > 0 && <PaginationButton page={page} setPage={setPage}/>}
+                {recipes.length > 0 && <PaginationButton page={page} setPage={setPage} recipes={recipes} totalResults={totalResults}/>}
             </main>
     );
 }

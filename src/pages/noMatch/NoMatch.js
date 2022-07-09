@@ -1,13 +1,15 @@
 import React from 'react';
 
 import "./NoMatch.css";
-
-import cryingAvocado from "../../assets/—Pngtree—crying avocado illustration vector on_5299408.png";
+import cryingAvocado from "../../assets/crying avocado.png";
 import WrapperMain from "../../components/wrapper/WrapperMain";
-import Button from "../../components/button/Button";
+import {useNavigate} from "react-router-dom";
 
 
 function NoMatch() {
+
+    let navigate = useNavigate();
+
     return (
         <WrapperMain>
 
@@ -19,11 +21,13 @@ function NoMatch() {
                          className="not-found__image"
                     />
                 </div>
-                <Button
+                <button
                     type="button"
-                    className="back-home-button">
+                    className="back-home-button"
+                    onClick={() => navigate("/", {replace: true})}
+                >
                     Go back to Home
-                </Button>
+                </button>
 
         </WrapperMain>
     );

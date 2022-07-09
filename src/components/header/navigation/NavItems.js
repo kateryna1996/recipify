@@ -11,7 +11,6 @@ import {NavigationItem} from "../../functionalComponents/NavigationItem";
 function NavItems(props) {
 
     const {isAuth, logout} = useContext(AuthContext);
-
     const toggleLinks = () => props.isMobile && props.closeMobileNav();
 
     return (

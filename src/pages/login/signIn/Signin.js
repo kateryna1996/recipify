@@ -32,7 +32,6 @@ function Signin() {
 
 
     function onFormSubmit(data) {
-        console.log(data);
         setError(false);
         toggleLoading(true);
 
@@ -42,7 +41,6 @@ function Signin() {
                     username: data.name,
                     password: data.password,
                 });
-                console.log(response.data);
                 login(response.data);
             } catch (e) {
                 console.error(e);

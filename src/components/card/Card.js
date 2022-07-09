@@ -25,7 +25,8 @@ function Card({title, image, recID, children}) {
                     {image ? <img src={image}
                                   alt={title}
                                   className="recipe-image"
-                        /> :
+                        />
+                        :
                         <img src={salad}
                              alt="no-picture-found"
                              className="default-image"
